@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>후안샘 사이트 모음 · yalli2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2ea;--ink:#1f1b16;--mute:#6f675c;--line:#e2dacb;--card:#fffdf8;--accent:#c2410c;
+--c-es:#c2410c;--c-en:#1d4ed8;--c-etc:#7c3aed;--c-hr:#0f766e;--c-dain:#b45309;--c-trip:#0369a1;--c-hub:#4d7c0f;--c-gd:#9d174d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,sans-serif;line-height:1.5}
+header{padding:48px 24px 24px;max-width:1180px;margin:0 auto}
+.eyebrow{font-size:13px;letter-spacing:.12em;color:var(--accent);font-weight:700;text-transform:uppercase}
+h1{font-family:"Noto Serif KR",serif;font-weight:900;font-size:clamp(30px,5vw,48px);margin:6px 0 8px;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0}
+.stats{display:flex;gap:28px;margin-top:22px;flex-wrap:wrap}
+.stat b{display:block;font-size:26px;font-weight:900;font-family:"Noto Serif KR",serif}
+.stat span{font-size:13px;color:var(--mute)}
+.bar{position:sticky;top:0;z-index:5;background:rgba(246,242,234,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1180px;margin:0 auto;padding:14px 24px}
+.searchrow{display:flex;gap:10px}
+.search{flex:1;position:relative}
+.search input{width:100%;font:inherit;font-size:17px;padding:13px 44px 13px 46px;border:1.5px solid var(--line);border-radius:12px;background:#fff;outline:none}
+.search input:focus{border-color:var(--ink)}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--mute)}
+.search kbd{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;border:1px solid var(--line);border-radius:5px;padding:1px 7px;color:var(--mute);background:var(--bg)}
+select{font:inherit;padding:0 12px;border:1.5px solid var(--line);border-radius:12px;background:#fff}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chip{font:inherit;font-size:14px;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:5px 13px;cursor:pointer;display:flex;align-items:center;gap:6px}
+.chip i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.chip small{color:var(--mute);font-size:12px}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip.on small{color:#cfc6b8}
+main{max-width:1180px;margin:0 auto;padding:20px 24px 60px}
+.count{color:var(--mute);font-size:14px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 14px;display:flex;flex-direction:column;border-top:4px solid var(--cc);transition:transform .15s, box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px -12px rgba(31,27,22,.35)}
+.cat{font-size:12px;font-weight:700;color:var(--cc);letter-spacing:.04em}
+.card h3{margin:4px 0 6px;font-size:17px;line-height:1.35}
+.card p{margin:0 0 10px;color:#4a443b;font-size:14px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.tag{font-size:12px;background:#f1ebdf;color:#5d5549;border-radius:6px;padding:1px 7px;cursor:pointer;border:0;font-family:inherit}
+.tag:hover{background:#e6dccb}
+.foot{display:flex;align-items:center;justify-content:space-between;border-top:1px dashed var(--line);padding-top:10px;gap:8px}
+.repo{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.links{display:flex;gap:6px;flex-shrink:0}
+.links a{font-size:13px;text-decoration:none;border-radius:8px;padding:5px 11px;font-weight:500}
+.go{background:var(--ink);color:#fff}
+.gh{border:1px solid var(--line);color:var(--ink)}
+.copy{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 9px;cursor:pointer}
+.date{font-size:12px;color:var(--mute)}
+mark{background:#fde68a;color:inherit;border-radius:3px;padding:0 1px}
+.empty{text-align:center;padding:60px 20px;color:var(--mute)}
+footer{text-align:center;color:var(--mute);font-size:13px;padding:0 24px 40px}
+@media(max-width:600px){.searchrow{flex-direction:column}select{padding:10px}.search kbd{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">yalli2 · GitHub Pages</div>
+  <h1>후안샘 사이트 모음</h1>
+  <p class="sub">GitHub에 올린 수업·프로그램·운영 사이트를 한 곳에서 찾아보세요.</p>
+  <div class="stats" id="stats"></div>
+</header>
+<div class="bar"><div class="bar-in">
+  <div class="searchrow">
+    <label class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="제목, 설명, 저장소 이름, 태그로 검색 (예: 문법 KCIS, 오사카, B2)" autocomplete="off">
+      <kbd>/</kbd>
+    </label>
+    <select id="sort" aria-label="정렬">
+      <option value="updated">최근 수정순</option>
+      <option value="created">최근 생성순</option>
+      <option value="oldest">오래된 순</option>
+      <option value="name">이름순</option>
+    </select>
+  </div>
+  <div class="chips" id="chips"></div>
+</div></div>
+<main>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</main>
+<footer>사이트 주소는 https://yalli2.github.io/저장소이름/ 형식입니다 · 2026년 11월 8일 기준 62개</footer>
+<script>
+const SITES=[{"repo": "spa_con_9", "title": "Lección 09 · Me gusta mucho viajar", "cat": "스페인어", "desc": "KCIS 스페인어 회화 Lección 09(gustar·encantar·preferir) 쓰기시험 대비", "tags": ["KCIS", "쓰기시험", "회화", "gustar"], "created": "2026-11-08", "updated": "2026-11-08"}, {"repo": "spa_verb_conjugator", "title": "Conjuga · 스페인어 동사 활용 앱", "cat": "스페인어", "desc": "스페인어 동사 활용 연습 앱 — 캐릭터 Sol과 함께 활용형 연습", "tags": ["동사", "활용", "앱", "conjugación"], "created": "2026-11-06", "updated": "2026-11-08"}, {"repo": "travel_spanish", "title": "Pasaporte ¡Vámonos! · 스페인어 여행회화", "cat": "HR 프로그램", "desc": "다인에듀 HR 성인 외국어 프로그램 — 스페인어 여행회화 실시간 인터랙티브 실습", "tags": ["스페인어", "여행회화", "성인", "실시간"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "dainedu_budget", "title": "다인에듀 재무 대시보드", "cat": "다인에듀 운영", "desc": "월별 수입·지출 재무제표 대시보드", "tags": ["재무", "수입", "지출", "회계"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "scribd_magazine", "title": "세계 잡지 검색 허브", "cat": "검색 허브", "desc": "Scribd 세계 잡지 검색 색인", "tags": ["Scribd", "잡지", "검색"], "created": "2026-11-05", "updated": "2026-11-07"}, {"repo": "1500_A1", "title": "A1 · Vamos a practicar 1500 Preguntas", "cat": "스페인어", "desc": "스페인어 A1 문법 750 + 어휘 750 = 1500문항, 세트별 채점·한국어 해설", "tags": ["1500문항", "A1", "문제풀이", "DELE"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "1500_A2", "title": "A2 · Vamos a practicar 1500 Preguntas", "cat": "스페인어", "desc": "스페인어 A2 문법 750 + 어휘 750 = 1500문항, 세트별 채점·한국어 해설", "tags": ["1500문항", "A2", "문제풀이", "DELE"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "1500_B1", "title": "B1 · Vamos a practicar 1500 Preguntas", "cat": "스페인어", "desc": "스페인어 B1 문법 750 + 어휘 750 = 1500문항, 세트별 채점·한국어 해설", "tags": ["1500문항", "B1", "문제풀이", "DELE"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "1500_B2", "title": "B2 · Vamos a practicar 1500 Preguntas", "cat": "스페인어", "desc": "스페인어 B2 문법 750 + 어휘 750 = 1500문항, 세트별 채점·한국어 해설", "tags": ["1500문항", "B2", "문제풀이", "DELE"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "1500_C1", "title": "C1 · Vamos a practicar 1500 Preguntas", "cat": "스페인어", "desc": "스페인어 C1 문법 750 + 어휘 750 = 1500문항, 세트별 채점·한국어 해설", "tags": ["1500문항", "C1", "문제풀이", "DELE"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "1500_C2", "title": "C2 · Vamos a practicar 1500 Preguntas", "cat": "스페인어", "desc": "스페인어 C2 문법 750 + 어휘 750 = 1500문항, 세트별 채점·한국어 해설", "tags": ["1500문항", "C2", "문제풀이", "DELE"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "spa_level_test", "title": "스페인어 레벨테스트 (A1~C2)", "cat": "스페인어", "desc": "레벨별 1500문항에서 30문항 무작위 출제, 등급 진단·회차별 기록·오답노트", "tags": ["레벨테스트", "진단", "1500문항", "오답노트"], "created": "2026-11-07", "updated": "2026-11-07"}, {"repo": "GdU", "title": "Gramática de uso A1-A2 연습", "cat": "스페인어", "desc": "Gramática de uso del Español A1-A2 — Unidad별 문법 연습 (KCIS 수업)", "tags": ["문법", "Gramática de uso", "A1", "A2", "KCIS", "Unidad"], "created": "2026-10-10", "updated": "2026-11-06"}, {"repo": "inventos_100", "title": "유레카 100 — 세계를 바꾼 100개의 발명", "cat": "HR 프로그램", "desc": "Muy Interesante «100 inventos» 기반 외국어 실시간 워크숍", "tags": ["발명", "스페인어", "외국어", "성인", "실시간"], "created": "2026-11-06", "updated": "2026-11-06"}, {"repo": "gpe", "title": "파워 앤 플로우 — 글로벌 정치경제", "cat": "HR 프로그램", "desc": "Routledge Handbook to Global Political Economy 50개 논문 실시간 워크숍", "tags": ["정치경제", "GPE", "성인", "실시간"], "created": "2026-11-05", "updated": "2026-11-05"}, {"repo": "GdU_A1_B2", "title": "Gramática en Clase — A1–B2", "cat": "스페인어", "desc": "Gramática de uso A1–B2 · 126개 Unidad 문법 정리와 연습문제 (채점·해설)", "tags": ["문법", "Gramática de uso", "A1", "B2"], "created": "2026-10-13", "updated": "2026-11-03"}, {"repo": "japan_travel", "title": "Japan Trip Planner", "cat": "여행", "desc": "일본 여행 계획 플래너", "tags": ["일본", "여행", "계획"], "created": "2026-11-03", "updated": "2026-11-03"}, {"repo": "osaka_juyupass", "title": "오사카 주유패스 2일 코스", "cat": "여행", "desc": "오사카 주유패스 토·일 2일 코스 안내", "tags": ["오사카", "주유패스", "여행"], "created": "2026-11-03", "updated": "2026-11-03"}, {"repo": "mdh_ai_basic", "title": "MDHTech AI 실습실", "cat": "강의·가이드", "desc": "MDHTech 직원 대상 AI 기초실무 강의 실습 사이트", "tags": ["AI", "기업강의", "MDHTech", "실습"], "created": "2026-11-02", "updated": "2026-11-02"}, {"repo": "osaka_us", "title": "USJ 하루 공략", "cat": "여행", "desc": "유니버설 스튜디오 재팬 하루 공략 — 티켓·대기줄·슈퍼 닌텐도 월드 동선 지도", "tags": ["오사카", "USJ", "유니버설", "여행"], "created": "2026-10-26", "updated": "2026-10-31"}, {"repo": "dongguk_univ", "title": "동국 전공 가이드", "cat": "강의·가이드", "desc": "내게 맞는 전공 찾기 가이드", "tags": ["전공", "대학", "진로", "동국대"], "created": "2026-10-26", "updated": "2026-10-26"}, {"repo": "dainedu_fee", "title": "다인에듀 수업료 정산", "cat": "다인에듀 운영", "desc": "캘린더 수업 일정 기반 수강생별 수업료 정산·인보이스", "tags": ["수업료", "정산", "인보이스"], "created": "2026-10-26", "updated": "2026-10-26"}, {"repo": "russian_grammar", "title": "Да! 러시아어 문법", "cat": "기타 외국어", "desc": "Да! A Practical Guide to Russian Grammar 31개 챕터 — 연습·채점·듣기", "tags": ["러시아어", "문법", "KCIS"], "created": "2026-10-21", "updated": "2026-10-25"}, {"repo": "osaka", "title": "오사카·교토 4박 5일 가족여행", "cat": "여행", "desc": "난바역 기준 오사카·교토 가족여행 가이드", "tags": ["오사카", "교토", "가족여행"], "created": "2026-10-23", "updated": "2026-10-25"}, {"repo": "major_spanish", "title": "Español básico · 전공 기초 스페인어", "cat": "스페인어", "desc": "전공 기초 스페인어 학습 사이트", "tags": ["기초", "전공", "대학"], "created": "2026-10-24", "updated": "2026-10-25"}, {"repo": "spanish_conversation", "title": "Conversación I — 스페인어 회화 I", "cat": "스페인어", "desc": "스페인어 회화 I 학습 사이트", "tags": ["회화", "Conversación"], "created": "2026-10-24", "updated": "2026-10-24"}, {"repo": "hoyeon_spanish_unidad2", "title": "Unidad 2 · La plaza mayor", "cat": "스페인어", "desc": "Unidad 2 La plaza mayor — 스페인어 중간고사 학습", "tags": ["중간고사", "Unidad 2", "개인수업"], "created": "2026-10-24", "updated": "2026-10-24"}, {"repo": "ceo_dainedu", "title": "황부연 원장 이력", "cat": "다인에듀 운영", "desc": "다인에듀 대표 후안샘 이력 소개 — 세계지도 기반 해외 근무 이력", "tags": ["원장", "이력", "홈페이지", "후안샘"], "created": "2026-10-23", "updated": "2026-10-24"}, {"repo": "tarot_card", "title": "타로 카드 상징 탐험", "cat": "HR 프로그램", "desc": "카드 속 물건들의 상징을 테마별로 살펴보는 타로 학습 사이트", "tags": ["타로", "상징"], "created": "2026-10-21", "updated": "2026-10-21"}, {"repo": "eat_the_frog", "title": "퍼스트 바이트 — 21 Frogs", "cat": "HR 프로그램", "desc": "Eat That Frog! 21가지 방법 실시간 인터랙티브 워크숍", "tags": ["Eat That Frog", "습관", "생산성", "성인"], "created": "2026-10-21", "updated": "2026-10-21"}, {"repo": "self_improvement", "title": "마인드 리와이어 — 6스텝", "cat": "HR 프로그램", "desc": "The Science of Self-Improvement 기반 실시간 차트 워크숍", "tags": ["자기계발", "습관", "성인"], "created": "2026-10-21", "updated": "2026-10-21"}, {"repo": "jiyu_spanish", "title": "Cancha de Verbos", "cat": "스페인어", "desc": "스페인어 동사 연습 사이트", "tags": ["동사", "개인수업"], "created": "2026-10-21", "updated": "2026-10-21"}, {"repo": "mbti", "title": "타입 심포니 — MBTI", "cat": "HR 프로그램", "desc": "성격 유형(MBTI) 이론 챕터별 실시간 실습", "tags": ["MBTI", "성격유형", "성인"], "created": "2026-10-20", "updated": "2026-10-20"}, {"repo": "powerful_focus", "title": "포커스 어퍼처 — 7일 집중 조리개", "cat": "HR 프로그램", "desc": "Powerful Focus 7일 플랜 실시간 워크숍", "tags": ["집중", "Powerful Focus", "성인"], "created": "2026-10-20", "updated": "2026-10-20"}, {"repo": "metodo_a1", "title": "Método de español 1 (A1)", "cat": "스페인어", "desc": "Método de español 1 단원별 연습·자동 채점·듣기 (KCIS 수업)", "tags": ["Método", "A1", "KCIS", "듣기"], "created": "2026-10-20", "updated": "2026-10-20"}, {"repo": "growth_playbook", "title": "그로스 컴파운드 — Growth Compound", "cat": "HR 프로그램", "desc": "The Enterprise Growth Playbook 챕터별 실시간 실습", "tags": ["성장", "그로스", "성인"], "created": "2026-10-20", "updated": "2026-10-20"}, {"repo": "note_taking", "title": "스케치 싱킹 — Sketch Thinking", "cat": "HR 프로그램", "desc": "스케치노트 비주얼 노트테이킹 실시간 실습", "tags": ["스케치노트", "노트테이킹", "성인"], "created": "2026-10-19", "updated": "2026-10-20"}, {"repo": "useful_notes", "title": "노트 위브 — Note Weave", "cat": "HR 프로그램", "desc": "Make Useful Notes — 제텔카스텐·스케치노트 실시간 실습", "tags": ["노트", "제텔카스텐", "성인"], "created": "2026-10-20", "updated": "2026-10-20"}, {"repo": "tarot", "title": "아르카나 78 · HR 인사이트 랩", "cat": "HR 프로그램", "desc": "78장 타로로 일과 팀을 읽는 성인 HR 코칭 프로그램", "tags": ["타로", "코칭", "성인"], "created": "2026-10-19", "updated": "2026-10-19"}, {"repo": "world_english", "title": "World English · 세계사를 품은 영어 이야기", "cat": "영어", "desc": "국제학교 영어 수업용 인터랙티브 학습 사이트", "tags": ["영어", "세계사", "KCIS"], "created": "2026-10-19", "updated": "2026-10-19"}, {"repo": "activas1", "title": "Activas A1.1", "cat": "스페인어", "desc": "Activas A1.1 교재 인터랙티브 학습 사이트", "tags": ["Activas", "A1"], "created": "2026-10-19", "updated": "2026-10-19"}, {"repo": "public_speaking", "title": "MIC LEADER — 퍼블릭 스피킹", "cat": "HR 프로그램", "desc": "Public Speaking Mastery in Action 기반 실시간 실습", "tags": ["스피치", "발표", "성인"], "created": "2026-10-17", "updated": "2026-10-19"}, {"repo": "delf_a1", "title": "DELF A1 Study Site", "cat": "기타 외국어", "desc": "DELF A1 프랑스어 시험 대비 연습문제 (Le DELF A1 100% réussite)", "tags": ["프랑스어", "DELF", "KCIS"], "created": "2026-10-19", "updated": "2026-10-19"}, {"repo": "psychic-journey", "title": "MindGauge · 마음의 눈금", "cat": "HR 프로그램", "desc": "HR을 위한 심리검사 설계·평가 워크숍 12챕터", "tags": ["심리검사", "심리테스트", "성인"], "created": "2026-10-18", "updated": "2026-10-18"}, {"repo": "dalton_spanish_essay", "title": "스페인어 에세이 · 교육의 가치", "cat": "스페인어", "desc": "스페인어 에세이 시험 대비 (Savater 등)", "tags": ["에세이", "쓰기", "시험"], "created": "2026-10-18", "updated": "2026-10-18"}, {"repo": "tuescueladeespanol", "title": "Español paso a paso · 입문·초급", "cat": "스페인어", "desc": "입문·초급 스페인어 단계별 학습", "tags": ["입문", "초급"], "created": "2026-10-17", "updated": "2026-10-17"}, {"repo": "slack_ai", "title": "Slack AI 에이전트 가이드", "cat": "강의·가이드", "desc": "Slack AI 에이전트로 할 수 있는 일 안내", "tags": ["Slack", "AI", "가이드"], "created": "2026-10-17", "updated": "2026-10-17"}, {"repo": "scribd_selfdev", "title": "자기개발 도서 검색 허브", "cat": "검색 허브", "desc": "Scribd 자기개발 도서 검색 색인", "tags": ["Scribd", "자기개발", "도서", "검색"], "created": "2026-10-17", "updated": "2026-10-17"}, {"repo": "scribd_language", "title": "세계 언어 문법책 검색 허브", "cat": "검색 허브", "desc": "Scribd 세계 언어 문법책 검색 색인", "tags": ["Scribd", "문법책", "외국어", "검색"], "created": "2026-10-17", "updated": "2026-10-17"}, {"repo": "Jap_Gra_N5", "title": "JLPT N5 일본어 문법 · 1–80과", "cat": "기타 외국어", "desc": "JLPT N5 Grammar Master 1–80과 — 연습문제·채점·해설", "tags": ["일본어", "JLPT", "N5", "KCIS"], "created": "2026-10-17", "updated": "2026-10-17"}, {"repo": "money_math", "title": "월급의 셈법 — Payday Math", "cat": "HR 프로그램", "desc": "Money Math Workbook 기반 성인 경제 프로그램", "tags": ["경제", "돈", "월급", "성인"], "created": "2026-10-17", "updated": "2026-10-17"}, {"repo": "enneagram", "title": "에니어그램 워크숍", "cat": "HR 프로그램", "desc": "The Modern Enneagram 기반 실시간 워크숍", "tags": ["에니어그램", "성격", "성인"], "created": "2026-10-17", "updated": "2026-10-17"}, {"repo": "Brain_Cross_Training", "title": "브레인 크로스트레이닝", "cat": "HR 프로그램", "desc": "성인 대상 뇌훈련 프로그램", "tags": ["뇌훈련", "두뇌", "성인"], "created": "2026-10-16", "updated": "2026-10-16"}, {"repo": "Dainedu_Cost", "title": "수업료 정산 대시보드 (구버전)", "cat": "다인에듀 운영", "desc": "다인에듀 수강료 정산 앱 (초기 버전)", "tags": ["수업료", "정산"], "created": "2026-10-16", "updated": "2026-10-16"}, {"repo": "Por_Gra", "title": "브라질 포르투갈어 문법", "cat": "기타 외국어", "desc": "A Grammar of Spoken Brazilian Portuguese Lesson I–XXIX — 연습·채점", "tags": ["포르투갈어", "브라질", "문법"], "created": "2026-10-15", "updated": "2026-10-15"}, {"repo": "Jap_Con", "title": "여행 일본어 회화 · 필수 700 표현", "cat": "기타 외국어", "desc": "どんどん話せる日本語会話 필수 700 — 1~92과, 연습·채점", "tags": ["일본어", "회화", "여행"], "created": "2026-10-15", "updated": "2026-10-15"}, {"repo": "GdU_C1_C2", "title": "Gramática en Clase · C1–C2", "cat": "스페인어", "desc": "Gramática de uso del español C1–C2 문법 정리·연습", "tags": ["문법", "Gramática de uso", "C1", "C2"], "created": "2026-10-13", "updated": "2026-10-13"}, {"repo": "GdU_B1_B2", "title": "Gramática en Clase · B1–B2", "cat": "스페인어", "desc": "Gramática de uso del español B1–B2 문법 정리·연습", "tags": ["문법", "Gramática de uso", "B1", "B2"], "created": "2026-10-13", "updated": "2026-10-13"}, {"repo": "Oral-test", "title": "¿Qué me pongo?", "cat": "스페인어", "desc": "옷차림 주제 스페인어 말하기 시험 연습", "tags": ["말하기", "시험", "옷", "KCIS"], "created": "2026-10-12", "updated": "2026-10-12"}, {"repo": "Speaking-Test", "title": "Examen Oral · 말하기 수행평가 대비", "cat": "스페인어", "desc": "2학년 스페인어 회화Ⅰ 듣기/말하기 수행평가(Unidad 5·7) 모의시험", "tags": ["말하기", "듣기", "수행평가"], "created": "2026-10-11", "updated": "2026-10-11"}, {"repo": "DK_EfE_CB_L2", "title": "English for Everyone · Level 2", "cat": "영어", "desc": "DK English for Everyone Level 2 Units 1–5 인터랙티브 수업", "tags": ["영어", "DK", "초급"], "created": "2026-10-10", "updated": "2026-10-10"}, {"repo": "spanish-chapter5", "title": "English Grammar Lab", "cat": "영어", "desc": "배우고, 풀고, 점수 확인까지 — 영어 문법 연습 (저장소 설명은 '스페인어 5과 중간고사')", "tags": ["영어", "문법", "중간고사"], "created": "2026-10-10", "updated": "2026-10-10"}];
+const BASE="https://yalli2.github.io/", GH="https://github.com/yalli2/";
+const CATS=[["스페인어","--c-es"],["영어","--c-en"],["기타 외국어","--c-etc"],["HR 프로그램","--c-hr"],["다인에듀 운영","--c-dain"],["여행","--c-trip"],["검색 허브","--c-hub"],["강의·가이드","--c-gd"]];
+const color=c=>`var(${(CATS.find(x=>x[0]===c)||[0,"--accent"])[1]})`;
+let cat="전체";
+const $=id=>document.getElementById(id);
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+function hl(text,terms){let h=esc(text);if(!terms.length)return h;
+  const n=norm(text);const marks=[];
+  terms.forEach(t=>{let i=0;while((i=n.indexOf(t,i))>-1){marks.push([i,i+t.length]);i+=t.length;}});
+  if(!marks.length)return h;marks.sort((a,b)=>a[0]-b[0]);
+  let out="",pos=0;for(const[a,b]of marks){if(a<pos)continue;out+=esc(text.slice(pos,a))+"<mark>"+esc(text.slice(a,b))+"</mark>";pos=b;}
+  return out+esc(text.slice(pos));}
+function stats(){
+  const c=new Set(SITES.map(s=>s.cat)).size;
+  const last=SITES.map(s=>s.updated).sort().pop();
+  $("stats").innerHTML=`<div class="stat"><b>${SITES.length}</b><span>사이트</span></div><div class="stat"><b>${c}</b><span>분류</span></div><div class="stat"><b>${SITES.filter(s=>s.cat==="HR 프로그램").length}</b><span>HR 프로그램</span></div><div class="stat"><b>${last.slice(5).replace("-",".")}</b><span>최근 업데이트</span></div>`;}
+function chips(){
+  const all=[["전체","--ink"],...CATS];
+  $("chips").innerHTML=all.map(([n,v])=>{const k=n==="전체"?SITES.length:SITES.filter(s=>s.cat===n).length;
+    return `<button class="chip${cat===n?" on":""}" data-c="${n}"><i style="background:var(${v})"></i>${n} <small>${k}</small></button>`}).join("");
+  $("chips").querySelectorAll(".chip").forEach(b=>b.onclick=()=>{cat=b.dataset.c;try{localStorage.setItem("yc",cat)}catch(e){}chips();render();});}
+function render(){
+  const terms=norm($("q").value.trim()).split(/\s+/).filter(Boolean);
+  let list=SITES.filter(s=>(cat==="전체"||s.cat===cat)&&terms.every(t=>norm([s.title,s.desc,s.repo,s.cat,s.tags.join(" ")].join(" ")).includes(t)));
+  const so=$("sort").value;
+  list.sort((a,b)=>so==="name"?a.title.localeCompare(b.title,"ko"):so==="created"?b.created.localeCompare(a.created):so==="oldest"?a.created.localeCompare(b.created):b.updated.localeCompare(a.updated)||a.repo.localeCompare(b.repo));
+  $("count").textContent=`${list.length}개 사이트${cat!=="전체"?" · "+cat:""}${terms.length?" · ‘"+$("q").value.trim()+"’ 검색":""}`;
+  $("grid").innerHTML=list.length?list.map(s=>`
+   <article class="card" style="--cc:${color(s.cat)}">
+     <div style="display:flex;justify-content:space-between"><span class="cat">${s.cat}</span><span class="date">${s.updated.replace(/-/g,".")}</span></div>
+     <h3>${hl(s.title,terms)}</h3>
+     <p>${hl(s.desc,terms)}</p>
+     <div class="tags">${s.tags.map(t=>`<button class="tag" data-t="${esc(t)}">#${hl(t,terms)}</button>`).join("")}</div>
+     <div class="foot"><span class="repo">${hl(s.repo,terms)}</span>
+       <span class="links"><button class="copy" data-u="${BASE+s.repo}/" title="주소 복사">복사</button><a class="gh" href="${GH+s.repo}" target="_blank" rel="noopener">GitHub</a><a class="go" href="${BASE+s.repo}/" target="_blank" rel="noopener">열기 ↗</a></span></div>
+   </article>`).join(""):`<div class="empty">검색 결과가 없습니다. 다른 단어로 찾아보세요.</div>`;
+  $("grid").querySelectorAll(".tag").forEach(b=>b.onclick=()=>{$("q").value=b.dataset.t;render();window.scrollTo({top:0,behavior:"smooth"})});
+  $("grid").querySelectorAll(".copy").forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.u);b.textContent="복사됨";}catch(e){b.textContent="실패";}setTimeout(()=>b.textContent="복사",1400);});
+}
+try{const c=localStorage.getItem("yc");if(c&&(c==="전체"||CATS.some(x=>x[0]===c)))cat=c}catch(e){}
+$("q").addEventListener("input",render);$("sort").addEventListener("change",render);
+document.addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement!==$("q")){e.preventDefault();$("q").focus();}if(e.key==="Escape"){$("q").value="";render();}});
+stats();chips();render();
+</script>
+</body>
+</html>
